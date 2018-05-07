@@ -3,6 +3,7 @@
 %%% @copyright (C) 2015, <COMPANY>
 %%% @doc
 %%% https://www.hackerrank.com/challenges/matrix-rotation-algo
+%%% https://www.hackerrank.com/challenges/matrix-rotation
 %%% Hackerrank - Matrix Layer Rotation
 %%% @end
 %%%-------------------------------------------------------------------

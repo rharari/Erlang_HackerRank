@@ -2,15 +2,14 @@
 %%% @author ricardo alberto harari
 %%% @copyright (C) 2017, <COMPANY>
 %%% @doc
-%%% https://www.hackerrank.com/challenges/mini-max-sum
+%%% https://www.hackerrank.com/challenges/lisa-workbook - Lisa's Workbook
 %%% @end
+%%% Created : 13. Aug 2017 08:32
 %%%-------------------------------------------------------------------
--module(e3).
+-module(e5).
 -author("ricardo.harari@gmail.com").
 
 %% API
 -export([main/0]).
 
-main() -> {ok, [A1,A2,A3,A4,A5]} = io:fread("", "~d ~d ~d ~d ~d"),
-          A = lists:sort([A1,A2,A3,A4,A5]), T = lists:sum(A),
-          io:format("~p ~p~n", [T - lists:nth(5,A), T - lists:nth(1,A)]).
+main() -> {ok, [I,J,K]} = io:fread("", "~d ~d ~d"), go(I, J, K, 0).
