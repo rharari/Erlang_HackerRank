@@ -33,9 +33,3 @@ getBin(T) -> case file:read(standard_io, 65536) of
                {ok, D} -> getBin(<<T/bytes, D/bytes>>);
                eof -> T
              end.
-
-
-
-%%                      print(Fptr, T).
-%%% c("big_sorting.erl").
-%%% big_sorting:main().
