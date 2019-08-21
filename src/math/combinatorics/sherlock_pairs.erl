@@ -11,9 +11,7 @@
 -export([main/0, solve/1]).
 -import(os, [getenv/1]).
 
-solve(A) ->
-  Arr = compact(lists:sort(A), -1, 0, []),
-  count(Arr, 0).
+solve(A) -> count(compact(lists:sort(A), -1, 0, []), 0).
 
 count([], Acc) -> Acc;
 count([H|T], Acc) -> count(T, Acc + (H - 1) * H).
@@ -31,9 +29,7 @@ main() ->
   lists:foreach(fun(_TItr) ->
     io:get_line(""),
     A = re:split(string:chomp(io:get_line("")), "\\s+", [{return, list}, trim]),
-    Result = solve(A),
-    io:format("~p~n", [Result]),
-    io:fwrite(Fptr, "~w~n", [Result]) end,
+    io:fwrite(Fptr, "~w~n", [solve(A)]) end,
     lists:seq(1, T)),
   file:close(Fptr),
   ok.
