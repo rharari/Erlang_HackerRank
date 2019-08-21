@@ -11,17 +11,14 @@
 -export([main/0, solve/1]).
 -import(os, [getenv/1]).
 
-solve(A) -> count(compact(lists:sort(A), -1, 0, []), 0).
-
-count([], Acc) -> Acc;
-count([H|T], Acc) -> count(T, Acc + (H - 1) * H).
+solve(A) -> compact(lists:sort(A), -1, 0, 0).
 
 compact([], _, Total, Acc) -> add_total(Acc, Total);
 compact([H|T], Last, Total, Acc) when H == Last -> compact(T, Last, Total + 1, Acc);
 compact([H|T], _, Total, Acc) -> compact(T, H, 1, add_total(Acc, Total)).
 
 add_total(Acc, V) when V < 2 -> Acc;
-add_total(Acc, V) -> Acc ++ [V].
+add_total(Acc, V) -> Acc + (V - 1) * V.
 
 main() ->
   {ok, Fptr} = file:open(getenv("OUTPUT_PATH"), [write]),
