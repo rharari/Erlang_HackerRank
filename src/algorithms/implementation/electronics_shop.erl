@@ -5,7 +5,6 @@
 %%% @end
 %%% Created : 19. Aug 2019 02:18
 %%%-------------------------------------------------------------------
-%%% > c("electronics_shop.erl")
 
 -module(electronics_shop).
 -author("rharari").
