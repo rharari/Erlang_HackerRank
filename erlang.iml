@@ -4,13 +4,17 @@
     <facet type="erlang" name="Erlang">
       <configuration />
     </facet>
+    <facet type="Elixir" name="Elixir facet">
+      <configuration sdkName="Unknown Elixir version at /home/rharari/.asdf/installs/elixir/1.9.4" />
+    </facet>
   </component>
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
+  <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="Erlang SDK" level="project" />
+    <orderEntry type="library" name="Unknown Elixir version at /home/rharari/.asdf/installs/elixir/1.9.4" level="application" />
   </component>
 </module>
